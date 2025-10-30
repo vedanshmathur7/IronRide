@@ -1,0 +1,223 @@
+{
+  "company": {
+    "name": "IronRide",
+    "tagline": "Your Journey, Our Commitment",
+    "founded": "2024",
+    "location": "New York and Jersey City area",
+    "contact": {
+      "email": "contact@ironride.com",
+      "phone": "+1 (555) 123-4567",
+      "address": "123 Main Street, New York, NY 10001"
+    }
+  },
+  "services": [
+    {
+      "id": "standard",
+      "name": "Standard Ride",
+      "description": "Quick and efficient rides for your everyday travel needs, with an emphasis on safety and professionalism.",
+      "basePrice": 25,
+      "image": "standard.png",
+      "features": [
+        "Professional driver",
+        "Clean vehicle",
+        "Real-time tracking",
+        "24/7 availability"
+      ]
+    },
+    {
+      "id": "vip",
+      "name": "Secure VIP Ride",
+      "description": "Premium service with enhanced security for high-profile individuals, ensuring utmost discretion and safety.",
+      "basePrice": 75,
+      "image": "safe.png",
+      "features": [
+        "Executive protection trained driver",
+        "Luxury vehicle",
+        "Route security assessment",
+        "Confidential service",
+        "Priority support"
+      ]
+    },
+    {
+      "id": "airport",
+      "name": "Airport Transfer",
+      "description": "Reliable and punctual transfers to and from the airport. We track your flight to ensure timely service.",
+      "basePrice": 50,
+      "image": "airport.png",
+      "features": [
+        "Flight tracking",
+        "Meet and greet",
+        "Luggage assistance",
+        "Free waiting time",
+        "All major airports covered"
+      ]
+    },
+    {
+      "id": "family",
+      "name": "Women & Family Safe Ride",
+      "description": "Safe and comfortable rides with trained female drivers available for women and families upon request.",
+      "basePrice": 30,
+      "image": "family.png",
+      "features": [
+        "Female drivers available",
+        "Child seats provided",
+        "Extra safety protocols",
+        "Family-friendly environment",
+        "Background verified drivers"
+      ]
+    }
+  ],
+  "team": [
+    {
+      "id": "alex",
+      "name": "Captain Alex",
+      "title": "Retired Army Officer",
+      "experience": "15 years military service",
+      "specialization": "Operations Management",
+      "bio": "Former Army Captain with extensive experience in logistics and security operations."
+    },
+    {
+      "id": "ben",
+      "name": "Sergeant Ben",
+      "title": "Defense-Trained Professional",
+      "experience": "12 years defense training",
+      "specialization": "Security Protocols",
+      "bio": "Expert in tactical driving and passenger protection with military police background."
+    },
+    {
+      "id": "chris",
+      "name": "Lieutenant Chris",
+      "title": "Former Military Police",
+      "experience": "10 years law enforcement",
+      "specialization": "Safety & Compliance",
+      "bio": "Specialized in threat assessment and secure transportation of VIP personnel."
+    }
+  ],
+  "values": [
+    {
+      "title": "Safety First",
+      "description": "Your safety is our top priority. We employ rigorous background checks and continuous training to ensure a secure environment.",
+      "icon": "shield"
+    },
+    {
+      "title": "Professionalism",
+      "description": "Our drivers are not just skilled; they are courteous professionals with a disciplined background, ensuring a polite and disciplined service.",
+      "icon": "star"
+    },
+    {
+      "title": "Reliability",
+      "description": "Count on us for timely and dependable service. We understand the importance of punctuality and strive to exceed expectations.",
+      "icon": "clock"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Mark Thompson",
+      "avatar": "MT",
+      "rating": 5,
+      "comment": "The service was impeccable. The driver was so professional and the ride smooth. I felt completely safe.",
+      "date": "2024-10-15",
+      "service": "Standard Ride"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Miller",
+      "avatar": "SM",
+      "rating": 5,
+      "comment": "I felt safe and comfortable throughout my journey. The best cab service I've ever used.",
+      "date": "2024-10-20",
+      "service": "Women & Family Safe Ride"
+    },
+    {
+      "id": 3,
+      "name": "David Clark",
+      "avatar": "DC",
+      "rating": 5,
+      "comment": "Reliable and efficient service. I'll definitely be using IronRide for my business travels.",
+      "date": "2024-10-25",
+      "service": "Airport Transfer"
+    }
+  ],
+  "jobCategories": [
+    {
+      "id": "driving",
+      "name": "Driving",
+      "description": "Professional drivers with defense training background",
+      "requirements": [
+        "Valid driver's license",
+        "Clean driving record",
+        "Military or defense background preferred",
+        "Excellent communication skills"
+      ]
+    },
+    {
+      "id": "operations",
+      "name": "Operations",
+      "description": "Operations management and coordination roles",
+      "requirements": [
+        "Operations management experience",
+        "Strong organizational skills",
+        "Military logistics background preferred",
+        "Problem-solving abilities"
+      ]
+    },
+    {
+      "id": "support",
+      "name": "Support",
+      "description": "Customer support and administrative roles",
+      "requirements": [
+        "Customer service experience",
+        "Strong communication skills",
+        "Technical proficiency",
+        "Team player attitude"
+      ]
+    }
+  ],
+  "pricingFactors": {
+    "baseRates": {
+      "standard": 25,
+      "vip": 75,
+      "airport": 50,
+      "family": 30
+    },
+    "multipliers": {
+      "peakHours": 1.5,
+      "nightTime": 1.3,
+      "weekend": 1.2,
+      "holiday": 1.8
+    },
+    "additionalCharges": {
+      "perMile": 2.5,
+      "waitingTime": 0.5,
+      "tolls": "actual",
+      "extraPassengers": 5
+    }
+  },
+  "operatingHours": {
+    "weekdays": "24/7",
+    "weekends": "24/7",
+    "holidays": "24/7",
+    "support": "24/7"
+  },
+  "coverageArea": {
+    "primary": [
+      "New York City",
+      "Jersey City",
+      "Newark",
+      "Hoboken"
+    ],
+    "secondary": [
+      "White Plains",
+      "Stamford",
+      "New Rochelle",
+      "Yonkers"
+    ],
+    "airports": [
+      "JFK International Airport",
+      "Newark Liberty International",
+      "LaGuardia Airport",
+      "Westchester County Airport"
+    ]
+  }
+}

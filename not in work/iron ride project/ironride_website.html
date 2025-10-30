@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronRide - Premium Cab Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>🚗 IronRide</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="careers.html">Careers</a>
+                </nav>
+                <button class="btn btn-primary book-ride-btn">Book a Ride</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Premium Rides, Unmatched Comfort</h1>
+            <p class="hero-subtitle">Experience luxury transportation with IronRide - Your trusted partner for safe, reliable, and professional cab services</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary btn-lg book-ride-btn">Book a Ride Now</button>
+                <a href="services.html" class="btn btn-secondary btn-lg">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values Section -->
+    <section class="section mission-section">
+        <div class="container">
+            <h2 class="section-title">Our Mission & Values</h2>
+            <div id="mission-grid" class="mission-grid"></div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section team-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <p class="section-subtitle">Experienced professionals dedicated to your comfort and safety</p>
+            <div id="team-grid" class="team-grid"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Experience Premium Transportation?</h2>
+            <p>Book your ride today and discover the IronRide difference</p>
+            <button class="btn btn-primary btn-lg book-ride-btn">Book Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🚗 IronRide</h3>
+                    <p>Premium cab service delivering excellence in every journey.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>✉️ info@ironride.com</p>
+                    <p>📍 123 Main Street, City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 IronRide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Book Your Ride</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label>Pickup Location</label>
+                    <input type="text" required placeholder="Enter pickup address">
+                </div>
+                <div class="form-group">
+                    <label>Dropoff Location</label>
+                    <input type="text" required placeholder="Enter destination">
+                </div>
+                <div class="form-group">
+                    <label>Select Service</label>
+                    <select required>
+                        <option value="">Choose a service</option>
+                        <option value="standard">Standard Ride</option>
+                        <option value="vip">VIP Luxury</option>
+                        <option value="airport">Airport Transfer</option>
+                        <option value="family">Family Package</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date & Time</label>
+                    <input type="datetime-local" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" required placeholder="+1 (555) 123-4567">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- JAVASCRIPT FILE (script.js) -->
+<script>
+// JSON Data
+const siteData = {
+    "mission": [
+        {
+            "icon": "🛡️",
+            "title": "Safety First",
+            "description": "Your safety is our top priority. All our drivers are thoroughly vetted and our vehicles are regularly inspected to ensure the highest safety standards."
+        },
+        {
+            "icon": "💼",
+            "title": "Professionalism",
+            "description": "Our team of professional drivers is trained to provide courteous, reliable, and efficient service. We treat every passenger with respect and care."
+        },
+        {
+            "icon": "⭐",
+            "title": "Reliability",
+            "description": "Count on us to be there when you need us. With 24/7 availability and real-time tracking, we ensure you reach your destination on time, every time."
+        }
+    ],
+    "team": [
+        {
+            "name": "Michael Chen",
+            "title": "Lead Driver",
+            "image": "👨"
+        },
+        {
+            "name": "Sarah Johnson",
+            "title": "Senior Driver",
+            "image": "👩"
+        },
+        {
+            "name": "David Williams",
+            "title": "Airport Specialist",
+            "image": "👨‍✈️"
+        },
+        {
+            "name": "Emily Rodriguez",
+            "title": "VIP Services",
+            "image": "👩‍💼"
+        }
+    ],
+    "services": [
+        {
+            "name": "Standard Ride",
+            "description": "Perfect for everyday transportation needs. Comfortable, reliable, and affordable rides across the city.",
+            "image": "🚗",
+            "features": ["Comfortable vehicles", "Professional drivers", "Competitive pricing", "Real-time tracking"]
+        },
+        {
+            "name": "VIP Luxury",
+            "description": "Experience premium transportation with our luxury vehicle fleet. Perfect for special occasions and business travel.",
+            "image": "🚙",
+            "features": ["Luxury vehicles", "Executive service", "Complimentary refreshments", "Priority booking"]
+        },
+        {
+            "name": "Airport Transfer",
+            "description": "Stress-free airport transportation with flight tracking and meet & greet service.",
+            "image": "✈️",
+            "features": ["Flight tracking", "Meet & greet", "Luggage assistance", "Fixed pricing"]
+        },
+        {
+            "name": "Family Package",
+            "description": "Spacious vehicles perfect for family trips with child seats available upon request.",
+            "image": "👨‍👩‍👧‍👦",
+            "features": ["Spacious vehicles", "Child seats available", "Extra luggage space", "Family-friendly drivers"]
+        }
+    ],
+    "testimonials": [
+        {
+            "name": "Robert Thompson",
+            "quote": "IronRide has been my go-to service for all my business travels. Professional, punctual, and always reliable. Highly recommended!"
+        },
+        {
+            "name": "Jennifer Lee",
+            "quote": "The VIP service is exceptional! The vehicles are immaculate and the drivers are incredibly professional. Worth every penny."
+        },
+        {
+            "name": "Marcus Johnson",
+            "quote": "I've used IronRide for airport transfers multiple times. They track my flight and are always there waiting. Fantastic service!"
+        },
+        {
+            "name": "Lisa Anderson",
+            "quote": "As a parent, I appreciate the family-friendly service. The drivers are patient with kids and the vehicles are always clean and spacious."
+        }
+    ]
+};
+
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Load dynamic content
+    loadMissionValues();
+    loadTeam();
+    loadServices();
+    loadTestimonials();
+    
+    // Initialize booking modal functionality
+    initializeBookingModal();
+    
+    // Initialize contact form
+    initializeContactForm();
+    
+    // Initialize careers form
+    initializeCareersForm();
+});
+
+// Load Mission & Values
+function loadMissionValues() {
+    const missionGrid = document.getElementById('mission-grid');
+    if (!missionGrid) return;
+    
+    missionGrid.innerHTML = '';
+    
+    siteData.mission.forEach(mission => {
+        const missionCard = document.createElement('div');
+        missionCard.className = 'mission-card';
+        missionCard.innerHTML = `
+            <div class="icon">${mission.icon}</div>
+            <h3>${mission.title}</h3>
+            <p>${mission.description}</p>
+        `;
+        missionGrid.appendChild(missionCard);
+    });
+}
+
+// Load Team Members
+function loadTeam() {
+    const teamGrid = document.getElementById('team-grid');
+    if (!teamGrid) return;
+    
+    teamGrid.innerHTML = '';
+    
+    siteData.team.forEach(member => {
+        const teamCard = document.createElement('div');
+        teamCard.className = 'team-card';
+        teamCard.innerHTML = `
+            <div class="team-image">${member.image}</div>
+            <div class="team-info">
+                <h3>${member.name}</h3>
+                <p>${member.title}</p>
+            </div>
+        `;
+        teamGrid.appendChild(teamCard);
+    });
+}
+
+// Load Services
+function loadServices() {
+    const servicesGrid = document.getElementById('services-grid');
+    if (!servicesGrid) return;
+    
+    servicesGrid.innerHTML = '';
+    
+    siteData.services.forEach(service => {
+        const serviceCard = document.createElement('div');
+        serviceCard.className = 'service-card';
+        serviceCard.innerHTML = `
+            <div class="service-image">${service.image}</div>
+            <div class="service-content">
+                <h3>${service.name}</h3>
+                <p>${service.description}</p>
+                <button class="btn btn-primary book-ride-btn">Book Now</button>
+            </div>
+        `;
+        servicesGrid.appendChild(serviceCard);
+    });
+    
+    // Re-initialize booking buttons after adding new ones
+    initializeBookingModal();
+}
+
+// Load Testimonials
+function loadTestimonials() {
+    const testimonialsGrid = document.getElementById('testimonials-grid');
+    if (!testimonialsGrid) return;
+    
+    testimonialsGrid.innerHTML = '';
+    
+    siteData.testimonials.forEach(testimonial => {
+        const testimonialCard = document.createElement('div');
+        testimonialCard.className = 'testimonial-card';
+        testimonialCard.innerHTML = `
+            <div class="quote">"</div>
+            <p>${testimonial.quote}</p>
+            <p class="author">- ${testimonial.name}</p>
+        `;
+        testimonialsGrid.appendChild(testimonialCard);
+    });
+}
+
+// Initialize Booking Modal
+function initializeBookingModal() {
+    const modal = document.getElementById('booking-modal');
+    const bookingButtons = document.querySelectorAll('.book-ride-btn');
+    const closeButton = modal?.querySelector('.modal-close');
+    const modalOverlay = modal?.querySelector('.modal-overlay');
+    const bookingForm = document.getElementById('booking-form');
+    
+    if (!modal) return;
+    
+    // Open modal when any booking button is clicked
+    bookingButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close modal
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        if (bookingForm) bookingForm.reset();
+    }
+    
+    if (closeButton) {
+        closeButton.addEventListener('click', closeModal);
+    }
+    
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', closeModal);
+    }
+    
+    // Handle form submission
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const formData = new FormData(bookingForm);
+            const pickup = bookingForm.querySelector('input[type="text"]').value;
+            const dropoff = bookingForm.querySelectorAll('input[type="text"]')[1].value;
+            const service = bookingForm.querySelector('select').value;
+            
+            // Show success message
+            alert(`🎉 Your ride is booked!\n\nPickup: ${pickup}\nDropoff: ${dropoff}\nService: ${service}\n\nOur team will contact you shortly to confirm your booking. Thank you for choosing IronRide!`);
+            
+            // Close modal and reset form
+            closeModal();
+        });
+    }
+    
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+}
+
+// Initialize Contact Form
+function initializeContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    if (!contactForm) return;
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = contactForm.querySelector('input[type="text"]').value;
+        const email = contactForm.querySelector('input[type="email"]').value;
+        
+        alert(`✅ Thank you for contacting us, ${name}!\n\nWe've received your message and will respond to ${email} within 24 hours.\n\nOur team is here to help!`);
+        
+        contactForm.reset();
+    });
+}
+
+// Initialize Careers Form
+function initializeCareersForm() {
+    const careersForm = document.getElementById('careers-form');
+    if (!careersForm) return;
+    
+    careersForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = careersForm.querySelector('input[type="text"]').value;
+        
+        alert(`🎉 Application Submitted Successfully!\n\nThank you for your interest in joining IronRide, ${name}!\n\nOur HR team will review your application and contact you within 3-5 business days.\n\nWe're excited about the possibility of having you on our team!`);
+        
+        careersForm.reset();
+    });
+}
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href.length > 1) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    });
+});
+</script>
+
+<!-- JSON DATA FILE (data.json) -->
+<script type="application/json">
+{
+    "mission": [
+        {
+            "icon": "🛡️",
+            "title": "Safety First",
+            "description": "Your safety is our top priority. All our drivers are thoroughly vetted and our vehicles are regularly inspected to ensure the highest safety standards."
+        },
+        {
+            "icon": "💼",
+            "title": "Professionalism",
+            "description": "Our team of professional drivers is trained to provide courteous, reliable, and efficient service. We treat every passenger with respect and care."
+        },
+        {
+            "icon": "⭐",
+            "title": "Reliability",
+            "description": "Count on us to be there when you need us. With 24/7 availability and real-time tracking, we ensure you reach your destination on time, every time."
+        }
+    ],
+    "team": [
+        {
+            "name": "Michael Chen",
+            "title": "Lead Driver",
+            "image": "👨"
+        },
+        {
+            "name": "Sarah Johnson",
+            "title": "Senior Driver",
+            "image": "👩"
+        },
+        {
+            "name": "David Williams",
+            "title": "Airport Specialist",
+            "image": "👨‍✈️"
+        },
+        {
+            "name": "Emily Rodriguez",
+            "title": "VIP Services",
+            "image": "👩‍💼"
+        }
+    ],
+    "services": [
+        {
+            "name": "Standard Ride",
+            "description": "Perfect for everyday transportation needs. Comfortable, reliable, and affordable rides across the city.",
+            "image": "🚗",
+            "features": ["Comfortable vehicles", "Professional drivers", "Competitive pricing", "Real-time tracking"]
+        },
+        {
+            "name": "VIP Luxury",
+            "description": "Experience premium transportation with our luxury vehicle fleet. Perfect for special occasions and business travel.",
+            "image": "🚙",
+            "features": ["Luxury vehicles", "Executive service", "Complimentary refreshments", "Priority booking"]
+        },
+        {
+            "name": "Airport Transfer",
+            "description": "Stress-free airport transportation with flight tracking and meet & greet service.",
+            "image": "✈️",
+            "features": ["Flight tracking", "Meet & greet", "Luggage assistance", "Fixed pricing"]
+        },
+        {
+            "name": "Family Package",
+            "description": "Spacious vehicles perfect for family trips with child seats available upon request.",
+            "image": "👨‍👩‍👧‍👦",
+            "features": ["Spacious vehicles", "Child seats available", "Extra luggage space", "Family-friendly drivers"]
+        }
+    ],
+    "testimonials": [
+        {
+            "name": "Robert Thompson",
+            "quote": "IronRide has been my go-to service for all my business travels. Professional, punctual, and always reliable. Highly recommended!"
+        },
+        {
+            "name": "Jennifer Lee",
+            "quote": "The VIP service is exceptional! The vehicles are immaculate and the drivers are incredibly professional. Worth every penny."
+        },
+        {
+            "name": "Marcus Johnson",
+            "quote": "I've used IronRide for airport transfers multiple times. They track my flight and are always there waiting. Fantastic service!"
+        },
+        {
+            "name": "Lisa Anderson",
+            "quote": "As a parent, I appreciate the family-friendly service. The drivers are patient with kids and the vehicles are always clean and spacious."
+        }
+    ]
+}
+</script>
+
+<!-- CSS STYLESHEET (styles.css) -->
+<style>
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-gold: #d4af37;
+    --gold-light: #f4e4a8;
+    --gold-dark: #b8941e;
+    --dark-bg: #000000;
+    --dark-card: #1a1a1a;
+    --darker-card: #0a0a0a;
+    --light-text: #ffffff;
+    --gray-text: #b8b8b8;
+    --accent-glow: rgba(212, 175, 55, 0.4);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #d4af37 0%, #f4e4a8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: var(--primary-gold);
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-gold);
+    transition: width 0.3s;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+    width: 100%;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #d4af37 0%, #b8941e 100%);
+    color: #000000;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #f4e4a8 0%, #d4af37 100%);
+    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-gold);
+    border: 2px solid var(--primary-gold);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-gold);
+    color: #000000;
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ffffff 0%, #d4af37 50%, #f4e4a8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--gray-text);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Sections */
+.section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--light-text);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--gray-text);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.page-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    padding: 6rem 0 4rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--gray-text);
+}
+
+/* Mission Grid */
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.mission-card {
+    background: var(--dark-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+}
+
+.mission-card:hover::before {
+    transform: translateX(100%);
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+    border-color: var(--primary-gold);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+.mission-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.mission-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-gold);
+}
+
+.mission-card p {
+    color: var(--gray-text);
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-card {
+    background: var(--dark-card);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.4);
+    border-color: var(--primary-gold);
+}
+
+.team-card .team-image {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    border-bottom: 2px solid var(--primary-gold);
+}
+
+.team-card .team-info {
+    padding: 1.5rem;
+    background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
+}
+
+.team-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color: var(--light-text);
+}
+
+.team-card p {
+    color: var(--primary-gold);
+    font-weight: 500;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: var(--dark-card);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 60px rgba(212, 175, 55, 0.4);
+    border-color: var(--primary-gold);
+}
+
+.service-card .service-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    border-bottom: 2px solid var(--primary-gold);
+}
+
+.service-card .service-content {
+    padding: 2rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-gold);
+}
+
+.service-card p {
+    color: var(--gray-text);
+    margin-bottom: 1.5rem;
+}
+
+/* Comparison Table */
+.comparison-section {
+    background: var(--darker-card);
+}
+
+.comparison-table {
+    overflow-x: auto;
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--dark-card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.comparison-table th {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    font-weight: 600;
+    color: var(--primary-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.comparison-table .check {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.comparison-table .cross {
+    color: #ef4444;
+}
+
+/* Testimonials */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: var(--dark-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.testimonial-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover::after {
+    transform: scaleX(1);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+    border-color: var(--primary-gold);
+}
+
+.testimonial-card .quote {
+    font-size: 2rem;
+    color: var(--primary-gold);
+    margin-bottom: 1rem;
+}
+
+.testimonial-card p {
+    color: var(--gray-text);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card .author {
+    font-weight: 600;
+    color: var(--light-text);
+    font-style: normal;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: var(--dark-card);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s;
+}
+
+.feature-card:hover {
+    border-color: var(--primary-gold);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+.feature-card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-gold);
+}
+
+.feature-card p {
+    color: var(--gray-text);
+}
+
+/* Forms */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--dark-card);
+    padding: 3rem;
+    border-radius: 12px;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--primary-gold);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    background: var(--darker-card);
+    color: var(--light-text);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+    background: #1a1a1a;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 2px solid rgba(212, 175, 55, 0.3);
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    color: var(--gray-text);
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer */
+.footer {
+    background: var(--darker-card);
+    padding: 3rem 0 1rem;
+    border-top: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: var(--primary-gold);
+}
+
+.footer-section p,
+.footer-section a {
+    color: var(--gray-text);
+    margin-bottom: 0.5rem;
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: var(--primary-gold);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    color: var(--gray-text);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--dark-card);
+    padding: 2.5rem;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 2px solid var(--primary-gold);
+    box-shadow: 0 30px 80px rgba(212, 175, 55, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--primary-gold);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.modal-close:hover {
+    color: var(--gold-light);
+}
+
+.modal-content h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-gold);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}
+</style>
+
+<!-- SAFETY PAGE (safety.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety - IronRide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>🚗 IronRide</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html" class="active">Safety</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="careers.html">Careers</a>
+                </nav>
+                <button class="btn btn-primary book-ride-btn">Book a Ride</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Your Safety is Our Priority</h1>
+            <p>Comprehensive safety measures for every journey</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Safety Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">🛡️</div>
+                    <h3>Background Checks</h3>
+                    <p>All drivers undergo comprehensive background verification and screening</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📍</div>
+                    <h3>Real-time Tracking</h3>
+                    <p>Track your ride in real-time and share your location with loved ones</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🚨</div>
+                    <h3>Emergency Button</h3>
+                    <p>Instant emergency assistance available at the touch of a button</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⭐</div>
+                    <h3>Driver Ratings</h3>
+                    <p>Transparent driver ratings and customer feedback system</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>Secure Payments</h3>
+                    <p>Encrypted payment processing for your financial security</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🚗</div>
+                    <h3>Vehicle Inspections</h3>
+                    <p>Regular maintenance and safety inspections for all vehicles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--darker-card);">
+        <div class="container">
+            <h2 class="section-title">Customer Testimonials</h2>
+            <p class="section-subtitle">Hear from our satisfied customers</p>
+            <div id="testimonials-grid" class="testimonials-grid"></div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Experience Safe & Reliable Transportation</h2>
+            <p>Book your ride with confidence</p>
+            <button class="btn btn-primary btn-lg book-ride-btn">Book Now</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🚗 IronRide</h3>
+                    <p>Premium cab service delivering excellence in every journey.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>✉️ info@ironride.com</p>
+                    <p>📍 123 Main Street, City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 IronRide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="booking-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Book Your Ride</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label>Pickup Location</label>
+                    <input type="text" required placeholder="Enter pickup address">
+                </div>
+                <div class="form-group">
+                    <label>Dropoff Location</label>
+                    <input type="text" required placeholder="Enter destination">
+                </div>
+                <div class="form-group">
+                    <label>Select Service</label>
+                    <select required>
+                        <option value="">Choose a service</option>
+                        <option value="standard">Standard Ride</option>
+                        <option value="vip">VIP Luxury</option>
+                        <option value="airport">Airport Transfer</option>
+                        <option value="family">Family Package</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date & Time</label>
+                    <input type="datetime-local" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" required placeholder="+1 (555) 123-4567">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- ABOUT PAGE (about.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - IronRide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>🚗 IronRide</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="about.html" class="active">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="careers.html">Careers</a>
+                </nav>
+                <button class="btn btn-primary book-ride-btn">Book a Ride</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>About IronRide</h1>
+            <p>Redefining premium transportation since 2020</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 class="section-title">Our Story</h2>
+                <p style="color: var(--gray-text); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                    Founded in 2020, IronRide emerged from a simple vision: to transform everyday transportation into an exceptional experience. We recognized that travel should be more than just getting from point A to point B—it should be comfortable, reliable, and memorable.
+                </p>
+                <p style="color: var(--gray-text); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                    Today, we serve thousands of satisfied customers across the region, delivering premium cab services that combine luxury, safety, and professionalism. Our fleet of modern vehicles and team of expert drivers ensure every journey meets the highest standards.
+                </p>
+                <p style="color: var(--gray-text); font-size: 1.1rem; line-height: 1.8;">
+                    Whether you're heading to the airport, attending an important business meeting, or simply need a reliable ride, IronRide is here to exceed your expectations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--darker-card);">
+        <div class="container">
+            <h2 class="section-title">Why Choose IronRide</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">💼</div>
+                    <h3>Professional Service</h3>
+                    <p>Trained drivers committed to excellence in every ride</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⏰</div>
+                    <h3>24/7 Availability</h3>
+                    <p>Book a ride anytime, day or night, 365 days a year</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💰</div>
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden fees or surge pricing, just honest rates</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌟</div>
+                    <h3>Premium Fleet</h3>
+                    <p>Modern, well-maintained vehicles for your comfort</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Join Thousands of Satisfied Customers</h2>
+            <p>Experience the IronRide difference today</p>
+            <button class="btn btn-primary btn-lg book-ride-btn">Book Your First Ride</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🚗 IronRide</h3>
+                    <p>Premium cab service delivering excellence in every journey.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>✉️ info@ironride.com</p>
+                    <p>📍 123 Main Street, City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 IronRide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="booking-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Book Your Ride</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label>Pickup Location</label>
+                    <input type="text" required placeholder="Enter pickup address">
+                </div>
+                <div class="form-group">
+                    <label>Dropoff Location</label>
+                    <input type="text" required placeholder="Enter destination">
+                </div>
+                <div class="form-group">
+                    <label>Select Service</label>
+                    <select required>
+                        <option value="">Choose a service</option>
+                        <option value="standard">Standard Ride</option>
+                        <option value="vip">VIP Luxury</option>
+                        <option value="airport">Airport Transfer</option>
+                        <option value="family">Family Package</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date & Time</label>
+                    <input type="datetime-local" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" required placeholder="+1 (555) 123-4567">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- CONTACT PAGE (contact.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - IronRide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>🚗 IronRide</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html" class="active">Contact</a>
+                    <a href="careers.html">Careers</a>
+                </nav>
+                <button class="btn btn-primary book-ride-btn">Book a Ride</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help 24/7</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="form-container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Get in Touch</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" required placeholder="+1 (555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <select required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="booking">Booking Support</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea required placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--darker-card);">
+        <div class="container">
+            <h2 class="section-title">Other Ways to Reach Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">📞</div>
+                    <h3>Phone</h3>
+                    <p>+1 (555) 123-4567</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Available 24/7</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>info@ironride.com</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Response within 24 hours</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📍</div>
+                    <h3>Office</h3>
+                    <p>123 Main Street</p>
+                    <p>City, State 12345</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🚗 IronRide</h3>
+                    <p>Premium cab service delivering excellence in every journey.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>✉️ info@ironride.com</p>
+                    <p>📍 123 Main Street, City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 IronRide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="booking-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Book Your Ride</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label>Pickup Location</label>
+                    <input type="text" required placeholder="Enter pickup address">
+                </div>
+                <div class="form-group">
+                    <label>Dropoff Location</label>
+                    <input type="text" required placeholder="Enter destination">
+                </div>
+                <div class="form-group">
+                    <label>Select Service</label>
+                    <select required>
+                        <option value="">Choose a service</option>
+                        <option value="standard">Standard Ride</option>
+                        <option value="vip">VIP Luxury</option>
+                        <option value="airport">Airport Transfer</option>
+                        <option value="family">Family Package</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date & Time</label>
+                    <input type="datetime-local" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" required placeholder="+1 (555) 123-4567">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- CAREERS PAGE (careers.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Team - IronRide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>🚗 IronRide</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="careers.html" class="active">Careers</a>
+                </nav>
+                <button class="btn btn-primary book-ride-btn">Book a Ride</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Join Our Team</h1>
+            <p>Drive with IronRide and be part of something special</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Why Drive with Us?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">💰</div>
+                    <h3>Competitive Pay</h3>
+                    <p>Earn excellent income with transparent pay structure</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⏰</div>
+                    <h3>Flexible Schedule</h3>
+                    <p>Work on your own terms with flexible hours</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎓</div>
+                    <h3>Training Provided</h3>
+                    <p>Comprehensive training and ongoing support</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🏥</div>
+                    <h3>Benefits Package</h3>
+                    <p>Health insurance and other benefits for full-time drivers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--darker-card);">
+        <div class="container">
+            <div class="form-container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Driver Application</h2>
+                <form id="careers-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" required placeholder="+1 (555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label>License Number</label>
+                        <input type="text" required placeholder="Enter your driver's license number">
+                    </div>
+                    <div class="form-group">
+                        <label>Years of Driving Experience</label>
+                        <select required>
+                            <option value="">Select experience</option>
+                            <option value="1-3">1-3 years</option>
+                            <option value="3-5">3-5 years</option>
+                            <option value="5-10">5-10 years</option>
+                            <option value="10+">10+ years</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Do you own a vehicle?</label>
+                        <select required>
+                            <option value="">Select option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Additional Information</label>
+                        <textarea placeholder="Tell us why you want to drive with IronRide"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🚗 IronRide</h3>
+                    <p>Premium cab service delivering excellence in every journey.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>✉️ info@ironride.com</p>
+                    <p>📍 123 Main Street, City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 IronRide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="booking-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Book Your Ride</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label>Pickup Location</label>
+                    <input type="text" required placeholder="Enter pickup address">
+                </div>
+                <div class="form-group">
+                    <label>Dropoff Location</label>
+                    <input type="text" required placeholder="Enter destination">
+                </div>
+                <div class="form-group">
+                    <label>Select Service</label>
+                    <select required>
+                        <option value="">Choose a service</option>
+                        <option value="standard">Standard Ride</option>
+                        <option value="vip">VIP Luxury</option>
+                        <option value="airport">Airport Transfer</option>
+                        <option value="family">Family Package</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date & Time</label>
+                    <input type="datetime-local" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" required placeholder="+1 (555) 123-4567">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- SERVICES PAGE (services.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - IronRide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>🚗 IronRide</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="services.html" class="active">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="careers.html">Careers</a>
+                </nav>
+                <button class="btn btn-primary book-ride-btn">Book a Ride</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Premium Services</h1>
+            <p>Choose the perfect ride for every occasion</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div id="services-grid" class="services-grid"></div>
+        </div>
+    </section>
+
+    <section class="section comparison-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose IronRide?</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>IronRide</th>
+                            <th>Competitors</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>24/7 Availability</td>
+                            <td class="check">✓</td>
+                            <td class="cross">Limited</td>
+                        </tr>
+                        <tr>
+                            <td>Professional Drivers</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Luxury Fleet</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td>Real-time Tracking</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Fixed Pricing</td>
+                            <td class="check">✓</td>
+                            <td class="cross">Surge Pricing</td>
+                        </tr>
+                        <tr>
+                            <td>Premium Support</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Book Your Premium Ride?</h2>
+            <p>Experience the IronRide difference today</p>
+            <button class="btn btn-primary btn-lg book-ride-btn">Book Now</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🚗 IronRide</h3>
+                    <p>Premium cab service delivering excellence in every journey.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>✉️ info@ironride.com</p>
+                    <p>📍 123 Main Street, City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 IronRide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="booking-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Book Your Ride</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label>Pickup Location</label>
+                    <input type="text" required placeholder="Enter pickup address">
+                </div>
+                <div class="form-group">
+                    <label>Dropoff Location</label>
+                    <input type="text" required placeholder="Enter destination">
+                </div>
+                <div class="form-group">
+                    <label>Select Service</label>
+                    <select required>
+                        <option value="">Choose a service</option>
+                        <option value="standard">Standard Ride</option>
+                        <option value="vip">VIP Luxury</option>
+                        <option value="airport">Airport Transfer</option>
+                        <option value="family">Family Package</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date & Time</label>
+                    <input type="datetime-local" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" required placeholder="+1 (555) 123-4567">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
