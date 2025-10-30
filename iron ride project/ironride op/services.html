@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - IronRide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="services-page">
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">IronRide</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="safety.html">Safety</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="booking.html" class="btn">Book a Ride</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>Safe, Reliable, and Professional Rides tailored to your needs.</p>
+
+            <!-- 
+              This container will be filled dynamically by app.js 
+              with services from data.json
+            -->
+            <div id="service-container" style="margin-top: 4rem;">
+                <!-- Loading services... -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--surface-color);">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Veteran Rides (IronRide)</th>
+                        <th>Regular Cab Services</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Driver Training</td>
+                        <td>Defense-trained professionals</td>
+                        <td>Standard training</td>
+                    </tr>
+                    <tr>
+                        <td>Safety</td>
+                        <td>Enhanced security protocols</td>
+                        <td>Basic safety measures</td>
+                    </tr>
+                    <tr>
+                        <td>Reliability</td>
+                        <td>Punctual and dependable service</td>
+                        <td>Varies</td>
+                    </tr>
+                     <tr>
+                        <td>Professionalism</td>
+                        <td>Courteous and disciplined drivers</td>
+                        <td>Varies</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="join.html">Join Our Team</a>
+            </div>
+            <p>&copy; 2024 IronRide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- This is the toast element for notifications -->
+    <div id="toast-notification"></div>
+    
+    <!-- Link to the JavaScript file -->
+    <script src="app.js" defer></script>
+</body>
+</html>
+

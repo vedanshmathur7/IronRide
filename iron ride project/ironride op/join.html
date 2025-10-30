@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Team - IronRide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="join-page">
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">IronRide</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="safety.html">Safety</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="booking.html" class="btn">Book a Ride</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2>Join Our Team</h2>
+            <p>Become a part of a mission-driven team of ex-defense personnel and defense-trained professionals. Contribute to secure and reliable mobility solutions.</p>
+            
+            <div class="form-container">
+                <!-- 
+                  This form will be handled by app.js
+                  It will show an "Application Sent!" toast notification.
+                -->
+                <form id="join-form">
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-address">Email Address</label>
+                        <input type="email" id="email-address" name="email-address" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="job-category">Select Job Category</label>
+                        <select id="job-category" name="job-category" required>
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="Driving">Driving</option>
+                            <option value="Operations">Operations</option>
+                            <option value="Support">Support</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Experience</label>
+                        <textarea id="experience" name="experience" placeholder="Briefly describe your relevant experience (e.g., years in service, driving experience)" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="join.html">Join Our Team</a>
+            </div>
+            <p>&copy; 2024 IronRide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- This is the toast element for notifications -->
+    <div id="toast-notification"></div>
+    
+    <!-- Link to the JavaScript file -->
+    <script src="app.js" defer></script>
+</body>
+</html>
+
