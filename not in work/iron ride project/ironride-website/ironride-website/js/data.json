@@ -1,0 +1,85 @@
+{
+    "mission": [
+        {
+            "icon": "🛡️",
+            "title": "Safety First",
+            "description": "Your safety is our top priority. All our drivers are thoroughly vetted and our vehicles are regularly inspected to ensure the highest safety standards."
+        },
+        {
+            "icon": "💼",
+            "title": "Professionalism",
+            "description": "Our team of professional drivers is trained to provide courteous, reliable, and efficient service. We treat every passenger with respect and care."
+        },
+        {
+            "icon": "⭐",
+            "title": "Reliability",
+            "description": "Count on us to be there when you need us. With 24/7 availability and real-time tracking, we ensure you reach your destination on time, every time."
+        }
+    ],
+    "team": [
+        {
+            "name": "Michael Chen",
+            "title": "Lead Driver",
+            "image": "👨"
+        },
+        {
+            "name": "Sarah Johnson",
+            "title": "Senior Driver",
+            "image": "👩"
+        },
+        {
+            "name": "David Williams",
+            "title": "Airport Specialist",
+            "image": "👨‍✈️"
+        },
+        {
+            "name": "Emily Rodriguez",
+            "title": "VIP Services",
+            "image": "👩‍💼"
+        }
+    ],
+    "services": [
+        {
+            "name": "Standard Ride",
+            "description": "Perfect for everyday transportation needs. Comfortable, reliable, and affordable rides across the city.",
+            "image": "🚗",
+            "features": ["Comfortable vehicles", "Professional drivers", "Competitive pricing", "Real-time tracking"]
+        },
+        {
+            "name": "VIP Luxury",
+            "description": "Experience premium transportation with our luxury vehicle fleet. Perfect for special occasions and business travel.",
+            "image": "🚙",
+            "features": ["Luxury vehicles", "Executive service", "Complimentary refreshments", "Priority booking"]
+        },
+        {
+            "name": "Airport Transfer",
+            "description": "Stress-free airport transportation with flight tracking and meet & greet service.",
+            "image": "✈️",
+            "features": ["Flight tracking", "Meet & greet", "Luggage assistance", "Fixed pricing"]
+        },
+        {
+            "name": "Family Package",
+            "description": "Spacious vehicles perfect for family trips with child seats available upon request.",
+            "image": "👨‍👩‍👧‍👦",
+            "features": ["Spacious vehicles", "Child seats available", "Extra luggage space", "Family-friendly drivers"]
+        }
+    ],
+    "testimonials": [
+        {
+            "name": "Robert Thompson",
+            "quote": "IronRide has been my go-to service for all my business travels. Professional, punctual, and always reliable. Highly recommended!"
+        },
+        {
+            "name": "Jennifer Lee",
+            "quote": "The VIP service is exceptional! The vehicles are immaculate and the drivers are incredibly professional. Worth every penny."
+        },
+        {
+            "name": "Marcus Johnson",
+            "quote": "I've used IronRide for airport transfers multiple times. They track my flight and are always there waiting. Fantastic service!"
+        },
+        {
+            "name": "Lisa Anderson",
+            "quote": "As a parent, I appreciate the family-friendly service. The drivers are patient with kids and the vehicles are always clean and spacious."
+        }
+    ]
+}

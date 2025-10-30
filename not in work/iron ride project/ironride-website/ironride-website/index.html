@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronRide - Premium Cab Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>🚗 IronRide</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="careers.html">Careers</a>
+                </nav>
+                <a href="booking.html" class="btn btn-primary">Book a Ride</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Premium Rides, Unmatched Comfort</h1>
+            <p class="hero-subtitle">Experience luxury transportation with IronRide - Your trusted partner for safe, reliable, and professional cab services</p>
+            <div class="hero-buttons">
+                <a href="booking.html" class="btn btn-primary btn-lg">Book a Ride Now</a>
+                <a href="services.html" class="btn btn-secondary btn-lg">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values Section -->
+    <section class="section mission-section">
+        <div class="container">
+            <h2 class="section-title">Our Mission & Values</h2>
+            <div id="mission-grid" class="mission-grid"></div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section team-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <p class="section-subtitle">Experienced professionals dedicated to your comfort and safety</p>
+            <div id="team-grid" class="team-grid"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Experience Premium Transportation?</h2>
+            <p>Book your ride today and discover the IronRide difference</p>
+            <a href="booking.html" class="btn btn-primary btn-lg">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🚗 IronRide</h3>
+                    <p>Premium cab service delivering excellence in every journey.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="safety.html">Safety</a>
+                    <a href="about.html">About</a>
+                    
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>✉️ info@ironride.com</p>
+                    <p>📍 123 Main Street, City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 IronRide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Book Your Ride</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label>Pickup Location</label>
+                    <input type="text" required placeholder="Enter pickup address">
+                </div>
+                <div class="form-group">
+                    <label>Dropoff Location</label>
+                    <input type="text" required placeholder="Enter destination">
+                </div>
+                <div class="form-group">
+                    <label>Select Service</label>
+                    <select required>
+                        <option value="">Choose a service</option>
+                        <option value="standard">Standard Ride</option>
+                        <option value="vip">VIP Luxury</option>
+                        <option value="airport">Airport Transfer</option>
+                        <option value="family">Family Package</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date & Time</label>
+                    <input type="datetime-local" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" required placeholder="+1 (555) 123-4567">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
