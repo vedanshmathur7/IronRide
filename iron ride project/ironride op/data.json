@@ -1,0 +1,58 @@
+{
+  "services": [
+    {
+      "name": "Standard Ride",
+      "description": "Quick and efficient rides for your everyday travel needs, with an emphasis on safety and professionalism.",
+      "img": "https://placehold.co/600x400/2a2a2a/f0f0f0?text=Standard+Ride"
+    },
+    {
+      "name": "Secure VIP Ride",
+      "description": "Premium service with enhanced security for high-profile individuals, ensuring utmost discretion and safety.",
+      "img": "https://placehold.co/600x400/2a2a2a/f0f0f0?text=Secure+VIP"
+    },
+    {
+      "name": "Airport Transfer",
+      "description": "Reliable and punctual transfers to and from the airport. We track your flight to ensure timely service.",
+      "img": "https://placehold.co/600x400/2a2a2a/f0f0f0?text=Airport+Transfer"
+    },
+    {
+      "name": "Women & Family Safe Ride",
+      "description": "Safe and comfortable rides with trained female drivers available for women and families upon request.",
+      "img": "https://placehold.co/600x400/2a2a2a/f0f0f0?text=Family+Safe+Ride"
+    }
+  ],
+  "team": [
+    {
+      "name": "Captain Alex",
+      "title": "Retired Army Officer",
+      "img": "https://placehold.co/400x400/2a2a2a/e0e0e0?text=Alex"
+    },
+    {
+      "name": "Sergeant Ben",
+      "title": "Defense-Trained Professional",
+      "img": "https://placehold.co/400x400/2a2a2a/e0e0e0?text=Ben"
+    },
+    {
+      "name": "Lieutenant Chris",
+      "title": "Former Military Police",
+      "img": "https://placehold.co/400x400/2a2a2a/e0e0e0?text=Chris"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Mark Thompson",
+      "quote": "The service was impeccable. The driver was so professional and the ride smooth. I felt completely safe.",
+      "img": "https://placehold.co/100x100/2a2a2a/e0e0e0?text=MT"
+    },
+    {
+      "name": "Sarah Miller",
+      "quote": "I felt safe and comfortable throughout my journey. The best cab service I've ever used.",
+      "img": "https://placehold.co/100x100/2a2a2a/e0e0e0?text=SM"
+    },
+    {
+      "name": "David Clark",
+      "quote": "Reliable and efficient service. I'll definitely be using IronRide for my business travels.",
+      "img": "https://placehold.co/100x100/2a2a2a/e0e0e0?text=DC"
+    }
+  ]
+}
