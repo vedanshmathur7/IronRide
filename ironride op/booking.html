@@ -28,29 +28,29 @@
             <p>Fill out the form below to schedule your ride. Our team will confirm your booking shortly.</p>
 
             <div class="form-container">
-                <!-- 
-                  This form will be handled by app.js
-                  The 'event.preventDefault()' in app.js will stop the default page reload
-                  and allow us to show a toast notification.
-                -->
                 <form id="booking-form">
                     <div class="form-grid">
+
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" placeholder="Your Full Name" required>
                         </div>
+
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
                             <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
                         </div>
+
                         <div class="form-group form-group-full">
                             <label for="pickup">Pickup Address</label>
                             <input type="text" id="pickup" name="pickup" placeholder="Enter pickup location" required>
                         </div>
+
                         <div class="form-group form-group-full">
                             <label for="dropoff">Drop-off Address</label>
                             <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" required>
                         </div>
+
                         <div class="form-group">
                             <label for="service-type">Service Type</label>
                             <select id="service-type" name="service-type" required>
@@ -61,15 +61,21 @@
                                 <option value="Family">Women & Family Safe Ride</option>
                             </select>
                         </div>
+
                         <div class="form-group">
                             <label for="date">Pickup Date</label>
                             <input type="date" id="date" name="date" required>
                         </div>
+
                         <div class="form-group form-group-full">
                             <label for="time">Pickup Time</label>
                             <input type="time" id="time" name="time" required>
                         </div>
                     </div>
+
+                    <!-- 🔥 Hidden serviceType for backend mapping -->
+                    <input type="hidden" name="serviceType" id="hiddenServiceType" value="">
+
                     <button type="submit" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">Request Ride</button>
                 </form>
             </div>
@@ -84,15 +90,11 @@
                 <a href="contact.html">Contact Us</a>
                 <a href="join.html">Join Our Team</a>
             </div>
-            <p>&copy; 2024 IronRide.All rights reserved.</p>
+            <p>&copy; 2024 IronRide. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- This is the toast element for notifications -->
     <div id="toast-notification"></div>
-    
-    <!-- Link to the JavaScript file -->
     <script src="app.js" defer></script>
 </body>
 </html>
-
